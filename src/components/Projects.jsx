@@ -76,7 +76,7 @@ const Projects = () => {
         A few selected works showcasing my skills and passion.
       </motion.p>
 
-      {/* Filter Buttons */}
+      
       <div className="flex gap-4 flex-wrap mb-12">
         {filters.map((f) => (
           <motion.button
@@ -97,7 +97,7 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Project Cards */}
+      
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
         <AnimatePresence>
           {filtered.map((project, index) => (
@@ -120,7 +120,7 @@ const Projects = () => {
                   "linear-gradient(135deg, #23234a 60%, #1a1a2e 100%)",
               }}
             >
-              {/* Tag badge */}
+              
               <span
                 className={`absolute top-5 right-5 text-xs font-bold px-3 py-1 rounded-full shadow ${filterColors[project.tag] || "bg-violet-500"} text-white`}
               >

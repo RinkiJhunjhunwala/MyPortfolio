@@ -29,7 +29,7 @@ export default function Hero() {
   const role = useTransform(roleIndex, (idx) => roles[Math.floor(idx) % roles.length]);
   const text = useTransform(count, (latest) => (role.get() || "").slice(0, Math.round(latest)));
 
-  // Adjust width based on longest role, slightly increased for bigger font
+
   const roleWidth = `${longestRole.length * 0.75}em`;
 
   useEffect(() => {
@@ -69,20 +69,20 @@ export default function Hero() {
       id="home"
       className="relative min-h-[85vh] mt-20 px-6 md:px-14 bg-gradient-to-b from-space/90 via-space/80 to-space flex items-center justify-center"
     >
-      {/* Starry background overlay */}
+      
       <div className="absolute inset-0 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
 
       <div className="relative z-10 max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start justify-center gap-16">
-        {/* Left: Name */}
+        
         <div className="md:flex-1 max-w-lg text-left">
           <h1 className="text-white font-extrabold text-4xl md:text-5xl leading-tight drop-shadow-md select-none">
             👋 Hi, I'm <span className="text-nebula tracking-wide">Rinki Jhunjhunwala</span>
           </h1>
         </div>
 
-        {/* Right: Roles (single line) + Resume button below */}
+        
         <div className="flex flex-col items-start md:items-start md:flex-1 max-w-md w-full">
-          {/* Animated roles, fixed width */}
+          
           <div
             className="flex items-center mb-6"
             style={{
@@ -96,7 +96,7 @@ export default function Hero() {
               <Cursor />
             </span>
           </div>
-          {/* Resume button */}
+          
           <motion.a
             href="/resume.pdf"
             target="_blank"
@@ -129,7 +129,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Decorative glowing orb */}
+      
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 0.13, scale: 1 }}

@@ -58,7 +58,7 @@ const TimelineCard = ({ exp, index }) => (
     transition={{ delay: index * 0.15, duration: 0.6, type: "spring" }}
     className={`relative pl-12 md:pl-16 pb-14`}
   >
-    {/* Timeline dot */}
+    
     <span className="absolute left-0 top-2 w-6 h-6 rounded-full bg-violet border-4 border-white shadow-lg flex items-center justify-center text-xl animate-pulse">
       {index === 0 ? "👨‍💻" : "🧑‍💻"}
     </span>
@@ -97,7 +97,7 @@ const Experience = () => (
       Here is a summary of my work experience and contributions.
     </motion.p>
 
-    {/* Timeline vertical bar */}
+    
     <div className="relative flex">
       <motion.div
         variants={timelineVariants}
@@ -106,7 +106,7 @@ const Experience = () => (
         viewport={{ once: true }}
         className="absolute left-2 md:left-4 top-0 w-2 h-full bg-violet/60 rounded-full origin-top z-0 shadow-xl"
       />
-      {/* Timeline cards */}
+      
       <div className="flex-1 z-10">
         {experiences.map((exp, index) => (
           <TimelineCard key={index} exp={exp} index={index} />
